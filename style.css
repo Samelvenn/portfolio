@@ -1,0 +1,205 @@
+/* Basic layout and responsive behavior */
+html, body {
+  height: 100%;
+}
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #72b5f3;
+  color: #057ddf;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+/* Responsive navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+nav ul li a {
+  color: #057ddf;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.85);
+  color: #ffffff;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 6px 0;
+  z-index: 1000;
+}
+.dropdown-menu li { display: block; }
+.dropdown-menu li a { display: block; padding: 8px 12px; color: #ffffff; }
+.dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
+.dropdown:hover > .dropdown-menu { display: block; }
+
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; align-items: center; }
+  .dropdown-menu { position: static; box-shadow: none; }
+}
+
+footer {
+  background: #72b5f3;
+  color: #057ddf;
+  text-align: center;
+  padding: 12px 8px;
+  /* place footer at bottom without overlapping content */
+  margin-top: auto;
+}
+
+.projet {
+  margin: 20px auto;
+  text-align: center;
+}
+
+section {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  background: #057ddf;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/*Bouton importé*/
+.btn {
+  align-items: center;
+  border: none;
+  width: auto;
+  min-width: 180px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1C1A1C;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  color: #fff;
+}
+
+.sparkle {
+  fill: #AAAAAA;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #AAAAAA;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg,#A47CF3,#683FEA);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 180px 0px #f6f6f6;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  header { padding: 14px 12px; }
+  nav ul { gap: 8px; }
+  nav ul li a { padding: 8px 10px; }
+  section { padding: 16px; }
+  .btn { width: 100%; max-width: 360px; min-width: auto; }
+}
+
+/* ===== Page Projets : liste + tags ===== */
+.liste-projets {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: grid;
+  gap: 16px;
+}
+
+.carte-projet {
+  background: #ffffff;
+  color: #1c1a1c;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.carte-projet[hidden] { display: none; }
+.carte-projet h3 { margin: 0 0 8px 0; color: #057ddf; }
+.carte-projet p { margin: 0 0 12px 0; }
+
+.tags, .filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filtres { margin: 12px 0 0 0; }
+
+.tag {
+  display: inline-block;
+  background: #e3f1fd;
+  color: #057ddf;
+  border: 1px solid #057ddf;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: inherit;
+}
+button.tag { cursor: pointer; transition: all 200ms ease; }
+button.tag:hover,
+button.tag.actif {
+  background: #1c1a1c;
+  border-color: #1c1a1c;
+  color: #ffffff;
+}
+
+.lien-projet {
+  display: inline-block;
+  margin-top: 12px;
+  color: #057ddf;
+  font-weight: bold;
+  text-decoration: none;
+}
+.lien-projet:hover { text-decoration: underline; }

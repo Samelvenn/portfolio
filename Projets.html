@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Projets</h1>
+        <nav>
+            <ul>
+                <li><a href="A propos.html">À propos</a></li>
+                <li><a href="Projets.html">Projets</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Compétences.html">Compétences</a></li>
+                <li><a href="Veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projets">
+        <h2>Mes projets</h2>
+        <p>Voici ci-dessous la liste de mes projets réalisé durant ma formation et lors de mon temps personnel avec des
+            tags pour chaque technologie utilisée</p>
+
+        <div class="filtres" id="filtres">
+            <button type="button" class="tag actif" data-filtre="all">Tous</button>
+            <button type="button" class="tag" data-filtre="Python">Python</button>
+            <button type="button" class="tag" data-filtre="Java">Java</button>
+            <button type="button" class="tag" data-filtre="SQL">SQL</button>
+            <button type="button" class="tag" data-filtre="PowerShell">PowerShell</button>
+            <button type="button" class="tag" data-filtre="HTML/CSS">HTML/CSS</button>
+            <button type="button" class="tag" data-filtre="Veille">Veille</button>
+            <button type="button" class="tag" data-filtre="En_cours">En cours</button>
+            <button type="button" class="tag" data-filtre="Android">Android</button>
+        </div>
+
+        <ul class="liste-projets" id="liste-projets">
+            <li class="carte-projet" data-tags="HTML/CSS">
+                <h3>Projet 1 : Projet Blog</h3>
+                <p>J'ai réalisé un blog pour le portfolio qui doit être présenté lors de l'épreuve orale du BTS. On y
+                    retrouve mes différents projets et expériences en informatique, ainsi qu'une présentation du BTS
+                    SIO.</p>
+                <div class="tags"><span class="tag">HTML/CSS</span></div>
+            </li>
+
+            <li class="carte-projet" data-tags="Python">
+                <h3>Projet 2 : Projet Mastermind</h3>
+                <p>J'ai effectué un projet Python où le but était de reproduire le jeu Mastermind. Pour cela j'ai écrit
+                    plusieurs fonctions pour gérer les différentes étapes du jeu. Le projet a été réalisé en fin de premier semestre pour la fin du cycle Python.</p>
+                <div class="tags"><span class="tag">Python</span></div>
+                <a class="lien-projet" href="projet_mastermind.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="Veille">
+                <h3>Projet 3 : Veille technologique</h3>
+                <p>J'ai établis un thème de veille technologique sur l'évolution des cyberattaques et leurs impacts
+                    la population. La veille est mise à jour régulièrement en local.</p>
+                <div class="tags"><span class="tag">Veille</span></div>
+                <a class="lien-projet" href="Veille.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="Python SQL PowerShell">
+                <h3>Projet 4 : Gestion des utilisateurs</h3>
+                <p>Automatisation et sécurisation de la gestion des utilisateurs : extraction depuis des fichiers CSV,
+                    génération de mots de passe aléatoires et intégration dans une base de données.</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span
+                        class="tag">PowerShell</span></div>
+                <a class="lien-projet" href="Projet gestion utilisateur.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="Java SQL">
+                <h3>Projet 5 : Application service RH - InfoWare</h3>
+                <p>Application de gestion de salariés avec interface graphique, reliée à une base de données SQL.</p>
+                <div class="tags"><span class="tag">Java</span><span class="tag">SQL</span></div>
+                <a class="lien-projet" href="projet_infoware.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="Python SQL">
+                <h3>Projet 6 : Projet calcul de statistiques de personnages (licence Inazuma Eleven)</h3>
+                <p>J'ai effectué un projet Python où mon but était de créer une interface basique avec Tkinter pour c
+                    onsulter des données d'objets et les comparer.</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span></div>
+                <a class="lien-projet" href="projet_calcul_inazuma.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="HTML/CSS PHP SQL">
+                <h3>Projet 7 : Projet StageUp</h3>
+                <p>Un projet réalisé en groupe dans le cadre du cours d'AP. Le but était de créer une plateforme de
+                    gestion de stage. Une base de données a été créer avec un dashboard maquette, une page d'accueil et
+                    une page de connexion avec des identifiants et mots de passe créés.</p>
+                <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">PHP</span><span
+                        class="tag">SQL</span>
+                </div>
+            </li>
+
+            <li class="carte-projet" data-tags="Python">
+                <h3>Projet 8 : Projet de stage - Création d'une application locale pour consulter des données
+                    (dashboard)
+                </h3>
+                <p>Ce projet a été réalisé dans le cadre de mon stage de première année au sein du groupe SNCF. Avec
+                    des données fournies par l'entreprise pour comparer les coûts des différentes entités deu groupe.
+                </p>
+                <div class="tags"><span class="tag">Python</span></div>
+                <a class="lien-projet" href="projet_stage_premiere_annee.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="PHP SQL HTML/CSS En_cours">
+                <h3>Projet 9 : Projet AP - Modification d'une application déjà existante</h3>
+                <p>Ce projet a été réalisé dans le cadre du cours d'AP. C'est un projet en groupe, nous devons modifier
+                    et implémenter des nouvelles fonctionnalités à une application modèle. Le projet est un site
+                    dynamique pour pouvoir consulter une liste de restaurants et leurs informations.
+                </p>
+                <div class="tags"><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">En
+                        cours</span><span class="tag">HTML/CSS</span></div>
+                <a class="lien-projet" href="projet_ap_1.html">Voir le projet →</a>
+            </li>
+
+            <li class="carte-projet" data-tags="Python SQL En_cours">
+                <h3>Projet 10 : Projet de création et de gestion de tournoi</h3>
+                <p>Le but de ce projet est de créer une application via la bibliothèque Streamlit pour pouvoir établir
+                    des tournois.
+                    J'ai décidé de faire ce projet car il a pour but d'aider mon club de volleyball à gérer les tournois
+                    organisés comme le Téléthon. Cela permettra de gérer le tournoi à un seul endroit selon les
+                    paramètres souhaités comme les horaires, le format ou les équipes.
+                </p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">En
+                        cours</span></div>
+            </li>
+
+            <li class="carte-projet" data-tags="Java Android En_cours">
+                <h3>Projet 11 : Création d'une application Android</h3>
+                <p>Le but de ce projet est de créer une première application Android avec les notions vues en cours.
+                    Mon application a pour thème une academie de tennis avec pour but de gérer des entrainements ainsi
+                    que des joueurs.
+                </p>
+                <div class="tags"><span class="tag">Java</span><span class="tag">Android</span><span class="tag">En
+                        cours</span></div>
+                <a class="lien-projet" href="projet_app_android.html">Voir le projet →</a>
+            </li>
+        </ul>
+
+        <p id="aucun-projet" hidden>Aucun projet pour ce tag.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025-2026 Mon Portfolio</p>
+    </footer>
+
+    <script>
+        (function () {
+            var boutons = document.querySelectorAll('#filtres .tag');
+            var cartes = document.querySelectorAll('#liste-projets .carte-projet');
+            var vide = document.getElementById('aucun-projet');
+
+            boutons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var filtre = btn.getAttribute('data-filtre');
+                    var visibles = 0;
+
+                    boutons.forEach(function (b) { b.classList.toggle('actif', b === btn); });
+
+                    cartes.forEach(function (carte) {
+                        var tags = carte.getAttribute('data-tags').split(' ');
+                        var afficher = filtre === 'all' || tags.indexOf(filtre) !== -1;
+                        carte.hidden = !afficher;
+                        if (afficher) visibles++;
+                    });
+
+                    vide.hidden = visibles !== 0;
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
